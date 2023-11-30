@@ -25,7 +25,7 @@ AutenticacionController.autenticar = async (req, res) => {
 
         }
 
-        let token = jwt.sign(datos, JWT_KEY);     //{ expiresIn: '1h' } para que dure solo un tiempo el token..
+        let token = jwt.sign(datos, JWT_KEY);     //{ expiresIn: '1h' } para que dure solo una el token..
 
         res.json({ token: token, datos: datos })
 
@@ -34,8 +34,7 @@ AutenticacionController.autenticar = async (req, res) => {
     }
 }
 
-/*AutenticacionController.registrar = (req, res) => {
-}*/
+
 
 AutenticacionController.verificarToken = (req, res) => {
     const token = req.body.token;
