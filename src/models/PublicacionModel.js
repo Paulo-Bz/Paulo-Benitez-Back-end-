@@ -5,13 +5,13 @@ const PublicacionSchema = new Schema({
     contenido: String,
     autor: {
         type: Schema.Types.ObjectId,
-        ref: 'usuario',
+        ref: 'usuarios',
     },
 
 
 });
 
-const PublicacionModel = model('publicacion', PublicacionSchema);
+const PublicacionModel = model('publicaciones', PublicacionSchema);
 
 
 module.exports = PublicacionModel;

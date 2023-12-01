@@ -27,7 +27,7 @@ PublicacionController.verPublicacion = async (req, res) => {
 // VER PUBLICACIONES //
 PublicacionController.verPublicaciones = async (req, res) => {
     try {
-        const listaPublicaciones = await PublicacionModel.find().populate('autor');
+        const listaPublicaciones = await PublicacionModel.find().populate('usuarios');
 
         return res.json(listaPublicaciones);
 
